@@ -1,7 +1,8 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 export default function Feed() {
   return (
-    <div>Feed</div>
+    <Box bgcolor="pink" flex={4} p={2}>Feed</Box>
   )
 }
