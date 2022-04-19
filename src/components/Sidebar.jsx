@@ -22,7 +22,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 
-export default function Sidebar() {
+export default function Sidebar({ mode, setMode }) {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -86,7 +86,9 @@ export default function Sidebar() {
               <ListItemIcon>
                 <DarkMode />
               </ListItemIcon>
-              <Switch />
+              <Switch
+                onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')}
+              />
             </ListItemButton>
           </ListItem>
         </List>
